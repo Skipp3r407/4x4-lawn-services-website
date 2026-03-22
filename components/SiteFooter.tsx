@@ -59,15 +59,15 @@ export function SiteFooter() {
           <div className="flex flex-col gap-2 sm:gap-1.5">
             <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
             <p>
-              Designed by{" "}
+              Website Design by{" "}
               <a
                 href="https://elevatedigitalstudios.net/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block rounded-sm px-0.5 py-2.5 font-medium text-white/75 underline-offset-2 transition-colors sm:py-0.5 hover:text-[#C9A66B] hover:underline"
               >
-                Elevated Digital Studios
-              </a>
+                Elevate Digital Studio
+              </a>.
             </p>
           </div>
           <a href={`tel:${site.phoneTel}`} className="font-medium text-[#C9A66B] hover:text-white">
