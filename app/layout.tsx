@@ -26,9 +26,12 @@ export const metadata: Metadata = {
   },
   description: site.description,
   icons: {
-    icon: [{ url: "/images/logo.png", type: "image/png" }],
-    apple: "/images/logo.png",
-    shortcut: "/images/logo.png",
+    icon: [
+      { url: "/images/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/favicon-64.png", sizes: "64x64", type: "image/png" },
+      { url: "/images/favicon.png", sizes: "180x180", type: "image/png" },
+    ],
+    apple: "/images/apple-touch-icon.png",
   },
   openGraph: {
     title: `${site.name} | Orlando Landscaping & Lawn Care`,
