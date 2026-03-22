@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { SiteLogo } from "@/components/SiteLogo";
 import { navLinks, site } from "@/lib/site";
 
 export function SiteHeader() {
@@ -9,14 +10,13 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-[#E8E4DC] bg-[#F6F4EF]/90 backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
-        <Link href="/" className="group shrink-0" onClick={() => setOpen(false)}>
-          <span className="block font-[family-name:var(--font-heading)] text-lg font-bold tracking-tight text-[#0D0D0D] sm:text-xl">
-            4x4 Lawn Services
-          </span>
-          <span className="mt-0.5 block text-[10px] font-medium uppercase tracking-[0.2em] text-[#1F6F54] sm:text-xs">
-            {site.tagline}
-          </span>
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 sm:py-4">
+        <Link
+          href="/"
+          className="group flex min-w-0 max-w-[calc(100%-7rem)] shrink items-center ps-1 sm:max-w-none sm:ps-2"
+          onClick={() => setOpen(false)}
+        >
+          <SiteLogo variant="header" className="max-w-full" />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Main">

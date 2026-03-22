@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SiteLogo } from "@/components/SiteLogo";
 import { navLinks, site } from "@/lib/site";
 
 export function SiteFooter() {
@@ -7,8 +8,10 @@ export function SiteFooter() {
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
           <div>
-            <p className="font-[family-name:var(--font-heading)] text-xl font-bold">4x4 Lawn Services, LLC</p>
-            <p className="mt-2 text-sm text-white/80">
+            <Link href="/" className="inline-flex max-w-full items-center">
+              <SiteLogo variant="footer" className="max-w-[200px] sm:max-w-[220px]" />
+            </Link>
+            <p className="mt-3 text-sm text-white/80">
               Landscaping and lawn care in Orlando and {site.area}. Licensed and insured. By appointment.
             </p>
             <p className="mt-4 text-xs font-medium uppercase tracking-[0.2em] text-[#C9A66B]">{site.tagline}</p>

@@ -1,3 +1,9 @@
+/** Served from `public/images/logo.png` → `/images/logo.png` */
+export const brandLogo = {
+  src: "/images/logo.png",
+  alt: "4x4 Lawn Services logo",
+} as const;
+
 export const site = {
   name: "4x4 Lawn Services, LLC",
   tagline: "All Terrain • Todo Terreno",

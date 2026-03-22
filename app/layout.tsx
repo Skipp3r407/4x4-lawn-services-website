@@ -25,6 +25,11 @@ export const metadata: Metadata = {
     template: `%s | ${site.name}`,
   },
   description: site.description,
+  icons: {
+    icon: [{ url: "/images/logo.png", type: "image/png" }],
+    apple: "/images/logo.png",
+    shortcut: "/images/logo.png",
+  },
   openGraph: {
     title: `${site.name} | Orlando Landscaping & Lawn Care`,
     description: site.description,
