@@ -1,0 +1,64 @@
+import Link from "next/link";
+import { navLinks, site } from "@/lib/site";
+
+export function SiteFooter() {
+  return (
+    <footer className="border-t border-[#E8E4DC] bg-[#0F3D2E] text-[#F6F4EF]">
+      <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+          <div>
+            <p className="font-[family-name:var(--font-heading)] text-xl font-bold">4x4 Lawn Services, LLC</p>
+            <p className="mt-2 text-sm text-white/80">
+              Landscaping and lawn care in Orlando and {site.area}. Licensed and insured. By appointment.
+            </p>
+            <p className="mt-4 text-xs font-medium uppercase tracking-[0.2em] text-[#C9A66B]">{site.tagline}</p>
+          </div>
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-wide text-[#C9A66B]">Explore</p>
+            <ul className="mt-4 space-y-2">
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="text-sm text-white/90 hover:text-white">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-wide text-[#C9A66B]">Contact</p>
+            <ul className="mt-4 space-y-2 text-sm">
+              <li>
+                <a href={`tel:${site.phoneTel}`} className="hover:text-white">
+                  {site.phoneDisplay}
+                </a>
+              </li>
+              <li>
+                <a href={site.whatsappUrl} className="hover:text-white" target="_blank" rel="noopener noreferrer">
+                  WhatsApp {site.whatsappDisplay}
+                </a>
+              </li>
+              <li>
+                <a href={`mailto:${site.email}`} className="hover:text-white">
+                  {site.email}
+                </a>
+              </li>
+              <li>
+                <a href={site.instagramUrl} className="hover:text-white" target="_blank" rel="noopener noreferrer">
+                  {site.instagramHandle}
+                </a>
+              </li>
+              <li className="text-white/70">{site.address}</li>
+            </ul>
+          </div>
+        </div>
+        <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-8 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between">
+          <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
+          <a href={`tel:${site.phoneTel}`} className="font-medium text-[#C9A66B] hover:text-white">
+            Call {site.phoneDisplay}
+          </a>
+        </div>
+      </div>
+    </footer>
+  );
+}
