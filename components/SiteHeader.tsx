@@ -10,10 +10,10 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-[#E8E4DC] bg-[#F6F4EF]/90 backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 sm:py-4">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6 sm:py-5">
         <Link
           href="/"
-          className="group flex min-w-0 max-w-[calc(100%-7rem)] shrink items-center ps-1 sm:max-w-none sm:ps-2"
+          className="group flex min-w-0 max-w-[calc(100%-7.5rem)] shrink items-center ps-1.5 sm:max-w-none sm:ps-3"
           onClick={() => setOpen(false)}
         >
           <SiteLogo variant="header" className="max-w-full" />

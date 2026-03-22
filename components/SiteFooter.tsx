@@ -9,7 +9,7 @@ export function SiteFooter() {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
           <div>
             <Link href="/" className="inline-flex max-w-full items-center">
-              <SiteLogo variant="footer" className="max-w-[200px] sm:max-w-[220px]" />
+              <SiteLogo variant="footer" className="max-w-[320px] sm:max-w-[352px]" />
             </Link>
             <p className="mt-3 text-sm text-white/80">
               Landscaping and lawn care in Orlando and {site.area}. Licensed and insured. By appointment.

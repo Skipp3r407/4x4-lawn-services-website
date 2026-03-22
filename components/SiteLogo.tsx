@@ -3,12 +3,14 @@ import { brandLogo } from "@/lib/site";
 
 type Variant = "header" | "footer";
 
-const intrinsic = { width: 320, height: 96 };
+/** Intrinsic size for Next/Image (aspect ratio); scaled ~1.6× from 320×96 for sharper optimization */
+const intrinsic = { width: 512, height: 154 };
 
 const variantClass: Record<Variant, string> = {
   header:
-    "h-[52px] w-auto sm:h-[58px] md:h-[72px] lg:h-[82px] xl:h-[90px] max-h-[90px] object-contain object-left",
-  footer: "h-[38px] w-auto sm:h-10 md:h-11 max-h-11 object-contain object-left",
+    "h-[83px] w-auto sm:h-[93px] md:h-[115px] lg:h-[131px] xl:h-[144px] max-h-[144px] object-contain object-left",
+  footer:
+    "h-[61px] w-auto sm:h-16 md:h-[70px] max-h-[70px] object-contain object-left",
 };
 
 export function SiteLogo({
@@ -27,7 +29,11 @@ export function SiteLogo({
       width={intrinsic.width}
       height={intrinsic.height}
       priority={priority ?? variant === "header"}
-      sizes={variant === "header" ? "(max-width: 640px) 240px, (max-width: 1024px) 280px, 320px" : "160px"}
+      sizes={
+        variant === "header"
+          ? "(max-width: 640px) 384px, (max-width: 1024px) 450px, 512px"
+          : "256px"
+      }
       className={`${variantClass[variant]} ${className}`.trim()}
     />
   );
