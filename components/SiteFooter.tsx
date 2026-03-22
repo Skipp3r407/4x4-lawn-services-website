@@ -56,7 +56,20 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-8 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
+          <div className="flex flex-col gap-2 sm:gap-1.5">
+            <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
+            <p>
+              Designed by{" "}
+              <a
+                href="https://elevatedigitalstudios.net/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block rounded-sm px-0.5 py-2.5 font-medium text-white/75 underline-offset-2 transition-colors sm:py-0.5 hover:text-[#C9A66B] hover:underline"
+              >
+                Elevated Digital Studios
+              </a>
+            </p>
+          </div>
           <a href={`tel:${site.phoneTel}`} className="font-medium text-[#C9A66B] hover:text-white">
             Call {site.phoneDisplay}
           </a>
